@@ -211,14 +211,14 @@
 							<h5 class="text-3 mb-3">LATEST POSTS</h5>
 							<div id="tweet" class="twitter" data-plugin-tweets data-plugin-options="{'username': 'oklerthemes', 'count': 2}">
 							
-								{% for post in posts %}
+								
 								<div class="col-lg-10 mb-2 mb-lg-0">
 									<article>
 										<div class="card border-0 border-radius-0">
 											<div class=" bg-color-dark-scale-1 p-1 z-index-1">
 												
 												<div class="card-body p-0">
-													<h6 class="card-title mb-3 text-3 font-weight-semibold"><a class="text-color-light text-color-hover-primary text-decoration-none font-weight-bold text-3-5" href="/blog/{{post.slug}}">{{post.title|safe}}</a></h6>
+													<h6 class="card-title mb-3 text-3 font-weight-semibold"><a class="text-color-light text-color-hover-primary text-decoration-none font-weight-bold text-3-5" href="/blog/{{post.slug}}"></a></h6>
 										
 													
 												</div>
@@ -226,7 +226,7 @@
 										</div>
 									</article>
 								</div>
-								{% endfor %}
+								
 								
                                     
 							</div>

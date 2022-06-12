@@ -1,0 +1,101 @@
+{% extends "site/base.html" %}
+{% block title %}  Whitepapers  | futureanalytica.com {% endblock title %}
+
+{% block content %}
+
+<section class="page-header page-header-modern page-header-background page-header-background-md py-0 overlay overlay-color-primary overlay-show overlay-op-8" style="background-image: url(img/page-header/page-header-background-2.jpg);">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-5 order-2 order-sm-1 align-self-center p-static">
+								<div class="overflow-hidden">
+									<ul class="breadcrumb breadcrumb-light d-block appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="100" style="animation-delay: 100ms;">
+										<li><a href="/platform">Platform</a></li>
+										<li class="active">Whitepapers</li>
+									</ul>
+								</div>
+								<div class="overflow-hidden pb-2">
+									<h1 class="text-10 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300" style="animation-delay: 300ms;">
+                                        Learn how to turn AI into <strong>ROI</strong></h1>
+								</div>
+								<div class="appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400" style="animation-delay: 400ms;">
+									<span class="sub-title text-4 mt-4">World class data science talent with leading industry experts to capitalize AI in your enterprise</span>
+								</div>
+
+							</div>
+							<div class="col-sm-7 order-1 order-sm-2 align-items-end justify-content-end d-flex pt-5">
+								<div style="min-height: 350px;" class="overflow-hidden">
+									<img alt="" src="https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="img-fluid appear-animation animated slideInUp appear-animation-visible" data-appear-animation="slideInUp" data-appear-animation-delay="600" data-appear-animation-duration="1s" style="animation-duration: 1s; animation-delay: 600ms;">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="container py-4">
+					<div class="row">
+						
+						{% for post in all_posts %}
+						<article class="post post-large">
+							
+									<div class="post-image">
+										<a href="/blog/{{post.slug}}">
+											<img src="/media/{{post.document}}" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
+										</a>
+									</div>
+								</div>
+								<div class="col-lg-7">
+									<div class="post-content">
+										<h2 class="font-weight-semibold pt-4 pt-lg-0 text-5 line-height-4 mb-2"><a href="/blog/{{post.slug}}">{{ post.title }}</a></h2>
+										<p class="mb-0">{{post.body|truncatechars:250 }}</p>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="post-meta">
+										<span><li class="list-inline-item  mr-3"><a href="/blog/{{post.slug}}"> <i class="fa fa-calendar mr-2" aria-hidden="true"></i>{{post.created.date}}</a> </li></span>
+										
+										<span class="d-block d-sm-inline-block float-sm-end mt-3 mt-sm-0"><a href="/blog/{{post.slug}}" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
+									</div>
+								</div>
+							</div>
+						</article>
+						<div class="spacer py-5 my-5"></div>
+						{% endfor %}
+
+<!--<div class="container py-4">
+    <div class="row">
+        {% for i in '12' %}
+        <article class="post post-large">
+									<div class="post-image">
+										<a href="/contact-us/">
+											<img src="/static/img/blog/wide/blog-11.jpg" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="">
+										</a>
+									</div>
+
+									<div class="post-date">
+										<span class="day">10</span>
+										<span class="month">Jan</span>
+									</div>
+
+									<div class="post-content">
+
+										<h2 class="font-weight-semibold text-6 line-height-3 mb-3"><a href="/contact-us/">This is a stardard post with preview image</a></h2>
+										<p>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nunc dui, tristique in semper vel, congue sed ligula. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris tincidunt vitae. [...]</p>
+
+										<div class="post-meta">
+											<span><i class="far fa-user"></i> By <a href="#">John Doe</a> </span>
+											<span><i class="far fa-folder"></i> <a href="#">Lifestyle</a>, <a href="#">Design</a> </span>
+											<span><i class="far fa-comments"></i> <a href="#">12 Comments</a></span>
+											<span class="d-block d-sm-inline-block float-sm-end mt-3 mt-sm-0"><a href="/contact-us/" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
+										</div>
+
+									</div>
+								</article>
+        <div class="spacer py-5 my-5"></div>
+        {% endfor %}-->
+    </div>
+</div>
+
+
+
+{% endblock content %}

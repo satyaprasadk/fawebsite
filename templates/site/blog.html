@@ -1,0 +1,212 @@
+{% extends "site/base.html" %}
+{% block title %}  Blogs |futureanalytica.ai {% endblock title %}
+
+{% block content %}
+
+
+<div role="main" class="main">
+
+    <section class="page-header page-header-modern bg-color-light-scale-1 page-header-md">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 align-self-center p-static order-2 text-center">
+                    <h1 class="text-dark font-weight-bold text-8">Futureanalytica Blogs</h1>
+                    <span class="sub-title text-dark">Check out our Latest News!</span>
+                </div>
+                <div class="col-md-12 align-self-center order-1">
+                    <ul class="breadcrumb d-block text-center">
+                      
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container py-4">
+
+        <div class="row">
+            <div class="col-lg-3 order-lg-2">
+                <aside class="sidebar">
+                   
+                    <h5 class="font-weight-semi-bold pt-4">Categories</h5>
+                
+                    <div class="tabs tabs-dark mb-4 pb-2">
+                        <ul class="nav nav-tabs">
+                            
+                            <li class="nav-item"><a class="nav-link text-1 font-weight-bold text-uppercase" href="#recentPosts" data-bs-toggle="tab">Recent</a></li>
+                        </ul>
+                        
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="popularPosts">
+                                <ul class="simple-post-list">
+                                    {% for post in recent_post %}
+                                    <li>
+                                        <div class="post-img">
+                                            <img width="50" height="50" src="/media/{{post.document}}"  alt="" />
+                                            <div class="post-blog">
+                                                <div class="blog-box">
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item  mr-3"><a href="/blog/{{post.slug}}"> <i class="fa fa-calendar mr-2" aria-hidden="true"></i>{{post.created.date}}</a> </li>
+                                                    </ul>
+                                                    <a class="new-link" href="/blog/{{post.slug}}">
+                                                        <h5>{{post.title}}</h5>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
+                                    
+                                                                            
+                                        
+                            
+                                        
+                                        
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                       </aside>
+            </div>
+            <div class="col-lg-9 order-lg-1">
+                <div class="blog-posts">
+                    {% for post in all_posts %}
+                    <article class="post post-medium">
+                        <div class="row mb-3">
+                            <div class="col-lg-5">
+                                <div class="post-image">
+                                    <a href="/blog/{{post.slug}}">
+                                        <img src="/media/{{post.document}}" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="post-content">
+                                    <h2 class="font-weight-semibold pt-4 pt-lg-0 text-5 line-height-4 mb-2"><a href="/blog/{{post.slug}}">{{ post.title }}</a></h2>
+                                    <p class="mb-0">{{post.body|truncatechars:250 }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="post-meta">
+                                    <span><li class="list-inline-item  mr-3"><a href="/blog/{{post.slug}}"> <i class="fa fa-calendar mr-2" aria-hidden="true"></i>{{post.created.date}}</a> </li></span>
+                                    
+                                    <span class="d-block d-sm-inline-block float-sm-end mt-3 mt-sm-0"><a href="/blog/{{post.slug}}" class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    {% endfor %}
+                    </div>
+                    </div>
+                    
+                </div>
+
+<div role="main" class="main">
+
+    <!--<section class="page-header page-header-modern bg-color-light-scale-1 page-header-md">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 align-self-center p-static order-2 text-center">
+                    <h1 class="text-dark font-weight-bold text-8">FutureAnalytica </h1>
+                    <span class="sub-title text-dark">Blogs</span>
+                </div>
+                <div class="col-md-12 align-self-center order-1">
+                    
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+    <div class="container py-4" align="center">
+
+       
+    <center>           
+                   
+                    
+           
+            
+                    <!---<li><a href="/posts/?tag_slug={{tag.slug}}">{{tag.name|title}}</a></li>
+                
+                
+                    <div class="container">
+                        <div class="row">
+                             Blog Entries Column 
+                            <div >
+                                {% for post in all_posts %}
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h2 class="card-title"><a href="/blog/{{post.slug}}">{{ post.title }}</a></h2>
+                                        <p class="card-text text-muted h6">{{ post.created_on}} </p>
+                                        <img  width="800" height="350" src="/media/{{post.document}}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" />
+                                        <p style="text-align: justify;">{{post.body|truncatechars:250 }}</p>
+                                        
+                                    </div>
+                                </div>
+                                {% endfor %}
+                     </div>-->
+                    
+                
+        
+        
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 wow fadeInUp">
+            <div class="pagination justify-content-center">
+                <nav aria-label="Page navigation">
+                    {% include "site/pagination.html" with page=posts %}
+                    <!--
+                    <ul class='page-numbers'>
+                        <li> <span aria-current='page' class='page-numbers current'>1</span> </li>
+                        <li> <a class='page-numbers' href='#?paged=2'>2</a> </li>
+                        <li> <a class="next page-numbers" href="#?paged=2'"> <span aria-hidden="true">Next page</span> </a> </li>
+                    </ul>
+                    -->
+                </nav>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</center> 
+<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+$("#comment_form").submit(function(e) {
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+    var form = $(this);
+    var url = form.attr('action');
+    $.ajax({
+           type: "POST",
+           url: url,
+           data: form.serialize(), // serializes the form's elements.
+           success: function(data)
+           {
+              if (data.message == "Thank you for posting, your message is posted.")
+               {
+                  alert(data.message);
+                  location.reload();
+               }
+           }
+         });
+
+});
+
+</script> 
+
+{% endblock content %}

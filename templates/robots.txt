@@ -1,0 +1,4 @@
+User-agent: googlebot
+Disallow: /checkout/
+Disallow: /icons/
+sitemap: https://www.futureanalytica.ai/sitemap.xml

@@ -17,9 +17,7 @@ def privacy(request):
 ##------ Homepage
 def homepage(request):
     values={}
-    #values["kk"]  = Post.objects.filter(status='published').order_by("-publish")[:3]
-    values["posts"]  = Post.objects.filter(status='published').order_by("-publish")[:3]
-    #values["ft"] = Post.objects.filter(status='published',feature_blog=True)
+    
     return render(request,'site/index-classic.html', values)
 
 def kk(request):

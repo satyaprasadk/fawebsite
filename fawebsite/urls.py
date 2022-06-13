@@ -39,7 +39,7 @@ urlpatterns = [
     #re_path(r'^blog/$', views.blog, name='blog'),
     re_path(r'^blog/$', views.post_list,name='post_list'),
     re_path(r'^blog/(?P<id>[\w\-]+)/$',views.post_detail,name='post_detail'),
-
+    re_path(r'^about/',views.about,name='about'),
 
     re_path(r'^platform/$',views.platform,name='platform'),
     re_path(r'^what-is-new/$', views.what_is_new, name='what is new'),
@@ -47,8 +47,8 @@ urlpatterns = [
     re_path(r'^courses/$', views.course, name='course'),
     re_path(r'^contact-us/$', views.contact_us, name='contact_us'),
     re_path(r'^courses-details/$', views.cours, name='cours'),
-    re_path(r'^data-engineering/$', views.data_engeineering, name='videos'),
-    re_path(r'^machine-learning/$', views.machine_learning, name='machine_learning'),
+    re_path(r'^educationblog/$', views.educationblog, name='educationblog'),
+    re_path(r'^education/$', views.education, name='education'),
     re_path(r'^natural-language-processing/$', views.natural_language_processing, name='language_processing'),
     re_path(r'^ml-ops/$', views.ml_ops, name='ml_ops'),
     re_path(r'^explainable-ai/$', views.x_ai, name='x_ai'),

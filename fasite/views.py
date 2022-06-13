@@ -29,9 +29,9 @@ def book_demo(request):
     values = {}
     return render(request,'site/book-demo.html',values)    
 
-def book_demo(request):
+def about(request):
     values = {}
-    return render(request,'site/book-demo.html',values)
+    return render(request,'site/about.html',values)
 
 def blog(request):
     values = {}
@@ -79,13 +79,13 @@ def cours(request):
     values = {}
     return render(request, 'site/courses-details.html', values)
 
-def data_engeineering(request):
+def educationblog(request):
     values = {}
-    return render(request, 'site/data_engineering.html', values)
+    return render(request, 'site/education-blog-post.html', values)
 
-def machine_learning(request):
+def education(request):
     values = {}
-    return render(request, 'site/machine_learning.html', values)
+    return render(request, 'site/education-blog.html', values)
 
 def natural_language_processing(request):
     values = {}
